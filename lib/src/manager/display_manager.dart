@@ -63,8 +63,7 @@ class FlickDisplayManager extends ChangeNotifier {
       _showPlayerControlsTimer = Timer(
           _flickManager!.getPlayerControlsTimeout(
             errorInVideo: _flickManager!.flickVideoManager!.errorInVideo,
-            isVideoInitialized:
-                _flickManager!.flickVideoManager!.isVideoInitialized,
+            isVideoInitialized: _flickManager!.flickVideoManager!.isVideoInitialized,
             isPlaying: _flickManager!.flickVideoManager!.isPlaying,
             isVideoEnded: _flickManager!.flickVideoManager!.isVideoEnded,
           ), () {
@@ -74,7 +73,7 @@ class FlickDisplayManager extends ChangeNotifier {
     }
   }
 
-  /// Hide the player controls. Immediatelly
+  /// Hide the player controls. Immediately
   hidePlayerControls() {
     _showPlayerControlsTimer?.cancel();
     _showPlayerControls = false;
